@@ -70,8 +70,8 @@ const Navbar = () => {
             <div className="container">
                 <div className="flex items-center py-4">
                     <div className="animate-marquee whitespace-nowrap flex items-center gap-8">
-                        {banner.map((item) => (
-                            <span key={item.id} className="text-white font-semibold text-lg">
+                        {[...banner, ...banner].map((item, index) => (
+                            <span key={index} className="text-white font-semibold text-lg">
                                 {item.text}
                             </span>
                         ))}

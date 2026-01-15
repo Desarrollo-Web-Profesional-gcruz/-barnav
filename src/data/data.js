@@ -22,22 +22,27 @@ const banner = [
     {
         id:1,
         name: "cursos",
-        text: "🎓 ¡Nuevos cursos disponibles!"
+        text: "Juan"
     },
         {
         id:2,
         name: "aprender",
-        text: "📚 Aprende a tu ritmo"
+        text: "Gustavo"
     },
-        {
+    {
         id:3,
+        name: "nombre",
+        text: "Ángel"
+    },
+    {
+        id:4,
         name: "certificados",
-        text: "⭐ Certificados profesionales"
+        text: "Cruz"
     },
         {
-        id:4,
+        id:5,
         name: "Descuentos",
-        text: "💎 Descuentos especiales este mes"
+        text: "Méndez"
     }
 ]
 
