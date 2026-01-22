@@ -96,23 +96,50 @@ const Navbar = () => {
                 </div>
             </nav>
 
-            {/* BANNER */}
-            <div className="bg-gradient-to-r from-primary via-secondary to-primary overflow-hidden">
-                <div className="container">
-                    <div className="flex items-center py-4">
-                        <div className="animate-marquee whitespace-nowrap flex items-center gap-10">
+            {/* BANNER DE NAVEGACIÓN */}
+            <div className="relative overflow-hidden bg-gradient-to-r from-primary via-secondary to-primary">
+
+                {/* Overlay sutil para profundidad */}
+                <div className="absolute inset-0 bg-black/10 backdrop-blur-sm" />
+
+                {/* Contenido */}
+                <div className="relative container py-4">
+                    <div className="flex items-center">
+                        <div className="animate-marquee whitespace-nowrap flex items-center gap-12">
+
                             {[...banner, ...banner].map((item, index) => (
-                                <span
+                                <div
                                     key={index}
-                                    className="text-white font-semibold text-lg"
+                                    className="flex items-center gap-3 px-5 py-2
+                                    bg-white/10 backdrop-blur-md
+                                    rounded-full border border-white/20
+                                    shadow-sm
+                                    transition-all duration-300
+                                    hover:bg-white/20 hover:scale-105"
                                 >
-                                    {item.text}
-                                </span>
+                                    {/* Indicador animado */}
+                                    <span className="w-2 h-2 rounded-full bg-white animate-pulse" />
+
+                                    {/* Texto */}
+                                    <span className="text-white font-semibold text-base md:text-lg tracking-wide">
+                                        {item.text}
+                                    </span>
+                                </div>
                             ))}
+
                         </div>
                     </div>
                 </div>
+
+                {/* Fade izquierdo */}
+                <div className="pointer-events-none absolute left-0 top-0 h-full w-24
+                    bg-gradient-to-r from-primary to-transparent" />
+
+                {/* Fade derecho */}
+                <div className="pointer-events-none absolute right-0 top-0 h-full w-24
+                    bg-gradient-to-l from-primary to-transparent" />
             </div>
+
 
             {/* MENÚ RESPONSIVO */}
             <MenuResponsivo open={abierto} navbarLinks={navbarLinks} />
