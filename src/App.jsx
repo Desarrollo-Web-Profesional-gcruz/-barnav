@@ -1,8 +1,8 @@
 import Navbar from './componentes/Navbar'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import Home from './componentes/secciones/Home'
-import About from './componentes/secciones/About'
-import Cursos from './componentes/secciones/Cursos'
+import Home from './secciones/Home'
+import About from './secciones/About'
+import Cursos from './secciones/Cursos'
 const App = () => {
  return (
  <div className='overflow-x-hidden'>
