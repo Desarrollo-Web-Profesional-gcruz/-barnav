@@ -13,24 +13,31 @@ const Navbar = () => {
             {/* NAVBAR */}
             <nav className="bg-white/90 backdrop-blur-md shadow-sm sticky top-0 z-50">
                 <div className="container flex justify-between items-center py-6 font-bold">
-                    
-                    {/* LOGO */}
-                    <div className="flex items-center gap-3 text-2xl uppercase tracking-wide
+
+                    {/* LOGO CON MOVIMIENTO */}
+                    <div
+                        className="flex items-center gap-3 text-2xl uppercase tracking-wide
                         font-extrabold cursor-pointer select-none
-                        transition-all duration-300 hover:scale-105">
-                        
-                        <div className="bg-gradient-to-br from-primary to-secondary
-                            p-2 rounded-xl shadow-md text-white">
+                        transition-transform duration-300 hover:scale-105
+                        animate-float"
+                    >
+                        <div
+                            className="bg-gradient-to-br from-primary to-secondary
+                            p-2 rounded-xl shadow-md text-white
+                            transition-transform duration-500 hover:rotate-6"
+                        >
                             <ImBooks />
                         </div>
 
                         <div className="flex gap-1">
-                            <p>El sitio de <span className="text-primary">BARG</span></p>
+                            <p>
+                                El sitio de <span className="text-primary">BARG</span>
+                            </p>
                             <p className="text-secondary">Cursos</p>
                         </div>
                     </div>
 
-                    {/* MENÚ */}
+                    {/* MENÚ DESKTOP */}
                     <div className="hidden md:block">
                         <ul className="flex items-center gap-8 text-gray-600 font-semibold">
                             {navbarLinks.map((item) => (
@@ -48,25 +55,32 @@ const Navbar = () => {
                         </ul>
                     </div>
 
-                    {/* ICONOS Y BOTÓN */}
+                    {/* ICONOS + BOTÓN */}
                     <div className="flex items-center gap-4">
-                        
+
                         {/* BUSCAR */}
-                        <button className="text-2xl rounded-full p-2
-                            text-gray-600 hover:text-white
+                        <button
+                            className="text-2xl rounded-full p-2
+                            text-gray-600
+                            hover:text-white
                             hover:bg-gradient-to-br hover:from-primary hover:to-secondary
                             shadow-sm hover:shadow-md
-                            transition-all duration-300">
+                            transition-all duration-300"
+                        >
                             <CiSearch />
                         </button>
 
-                        {/* INGRESAR */}
-                        <button className="hidden md:flex items-center gap-2
+                        {/* BOTÓN INGRESAR (2 ESTILOS) */}
+                        <button
+                            className="hidden md:flex items-center gap-2
                             bg-gradient-to-r from-secondary to-primary
-                            hover:from-primary hover:to-secondary
                             text-white font-semibold px-6 py-2.5 rounded-xl
-                            shadow-md hover:shadow-xl
-                            transition-all duration-300 hover:-translate-y-0.5">
+                            shadow-md
+                            transition-all duration-300
+                            hover:from-primary hover:to-secondary
+                            hover:shadow-2xl hover:-translate-y-1
+                            active:scale-95"
+                        >
                             Ingresar
                         </button>
                     </div>
