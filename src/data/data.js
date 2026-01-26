@@ -15,6 +15,12 @@ const navbarLinks = [
  name: "courses",
  title: "Cursos",
  url: "/cursos"
+ },
+{
+ id: 4,
+ name: "Ofertas",
+ title: "ofertas",
+ url: "/ofertas"
  }
 ];
 
